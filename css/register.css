@@ -1,0 +1,166 @@
+/*  REGISTER PAGE */
+
+.register-page {
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.register-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: #1d1d1d;
+}
+
+    .register-box h1 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 38px;
+    }
+
+.register-intro {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+
+/* ERROR */
+
+.register-error {
+    padding: 14px;
+    margin-bottom: 25px;
+    background-color: #3a1515;
+    border: 1px solid #e32626;
+    color: white;
+}
+
+/*  FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 14px;
+        background-color: #111;
+        border: 1px solid #555;
+        color: white;
+        font-size: 16px;
+    }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #e32626;
+        }
+
+
+/*REGISTER BUTTON*/
+
+.register-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #e32626;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .register-button:hover {
+        background-color: #b91d1d;
+    }
+
+
+/* LOGIN LINK */
+
+.login-text {
+    margin-top: 25px;
+    text-align: center;
+    color: #aaa;
+}
+
+    .login-text a {
+        color: #e32626;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .register-page {
+        padding: 40px 20px;
+    }
+
+    .register-box {
+        padding: 30px 25px;
+    }
+
+        .register-box h1 {
+            font-size: 32px;
+        }
+}
+
+/* Password input with show/hide button */
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 75px;
+    box-sizing: border-box;
+}
+
+
+/* Position the password visibility button inside the input */
+.password-field .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 4px 6px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #e32626;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Highlight the password visibility button on hover */
+.password-field .password-toggle:hover {
+    color: #ff5555;
+}
+
+.password-hint {
+    display: block;
+    margin-top: 8px;
+    color: #bbbbbb;
+    font-size: 12px;
+    line-height: 1.5;
+}

@@ -1,0 +1,603 @@
+/* =========================
+   PRODUCT DETAILS PAGE
+========================= */
+
+.product-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 30px 100px;
+}
+
+
+/* BACK LINK */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+    .back-link:hover {
+        color: #e32626;
+    }
+
+
+/* PRODUCT DETAILS */
+
+
+/* Product image at the top, information underneath */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Product image container */
+.product-detail-image {
+    width: 100%;
+    height: 420px;
+    background-color: #1c1c1c;
+    border-radius: 14px;
+    overflow: hidden;
+
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+    /* Product image */
+    .product-detail-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display:block;
+        object-position:center;
+    }
+
+/* Product information below the image */
+.product-detail-info {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.no-image {
+    color: #888;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.product-detail-info {
+    padding: 20px;
+}
+
+.product-category {
+    color: #e32626;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-detail-info h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.product-description {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.product-price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+
+/* QUANTITY */
+
+.quantity-section {
+    margin-bottom: 25px;
+}
+
+    .quantity-section label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .quantity-section input {
+        width: 90px;
+        padding: 12px;
+        background-color: #222;
+        border: 1px solid #555;
+        color: white;
+        font-size: 16px;
+    }
+
+
+
+/* Add to Cart button */
+.add-cart-button {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 17px 24px;
+    margin-top: 25px;
+    background-color: #e32626;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    /* Button hover effect */
+    .add-cart-button:hover {
+        background-color: #c91e1e;
+    }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .add-cart-button {
+        max-width: 100%;
+        padding: 16px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .product-details {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-detail-image {
+        height: 350px;
+    }
+
+    .product-detail-info h1 {
+        font-size: 38px;
+    }
+}
+
+/* Stock status labels */
+.stock-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+    /* Products with enough stock */
+    .stock-status.in-stock {
+        background-color: #e0f2e8;
+        color: #216e45;
+    }
+
+    /* Products running low */
+    .stock-status.low-stock {
+        background-color: #fff0d6;
+        color: #925900;
+    }
+
+    /* Products with no stock remaining */
+    .stock-status.out-of-stock {
+        background-color: #fde2e2;
+        color: #b42318;
+    }
+
+/* Quantity feedback on the product page */
+#quantity-feedback {
+    display: block;
+    margin-top: 8px;
+    color: #b5b5b5;
+    font-size: 13px;
+}
+
+#quantity-warning {
+    margin-top: 6px;
+    color: #d87924;
+    font-size: 13px;
+}
+
+/* Keep the feedback on its own line */
+.quantity-section #quantity-feedback,
+.quantity-section #quantity-warning {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   COMBO CUSTOMISATION SECTION
+========================================= */
+
+.combo-customisation {
+    background-color: #1c1c1c;
+    border: 1px solid #333333;
+    border-radius: 14px;
+    padding: 28px;
+    margin: 30px 0;
+}
+
+    /* Main heading */
+    .combo-customisation h2 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    /* Section headings */
+    .combo-customisation h3 {
+        color: #e53935;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 8px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #383838;
+    }
+
+    /* Instructions under headings */
+    .combo-customisation > p {
+        color: #aaaaaa;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    /* Each customisation field */
+    .combo-customisation .combo-option {
+        margin-bottom: 20px;
+    }
+
+        /* Field labels */
+        .combo-customisation .combo-option label {
+            display: block;
+            color: #eeeeee;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+        /* Dropdowns and special instructions */
+        .combo-customisation .combo-option select,
+        .combo-customisation .combo-option textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #292929;
+            color: #ffffff;
+            border: 1px solid #494949;
+            border-radius: 9px;
+            padding: 13px 14px;
+            font-size: 14px;
+            font-family: inherit;
+            outline: none;
+        }
+
+            /* Highlight the selected field */
+            .combo-customisation .combo-option select:focus,
+            .combo-customisation .combo-option textarea:focus {
+                border-color: #e53935;
+                box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.12);
+            }
+
+            /* Dropdown options */
+            .combo-customisation .combo-option select option {
+                background-color: #292929;
+                color: #ffffff;
+            }
+
+        /* Special instructions textarea */
+        .combo-customisation .combo-option textarea {
+            resize: vertical;
+            min-height: 110px;
+            line-height: 1.6;
+        }
+
+            /* Placeholder text */
+            .combo-customisation .combo-option textarea::placeholder {
+                color: #888888;
+            }
+
+        /* Character limit information */
+        .combo-customisation .combo-option small {
+            display: block;
+            margin-top: 8px;
+            color: #999999;
+            font-size: 12px;
+        }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .combo-customisation {
+        padding: 18px;
+        margin: 20px 0;
+    }
+
+        .combo-customisation h2 {
+            font-size: 21px;
+        }
+
+        .combo-customisation h3 {
+            font-size: 16px;
+        }
+
+        .combo-customisation .combo-option select,
+        .combo-customisation .combo-option textarea {
+            font-size: 16px;
+        }
+}
+
+/* =========================================
+   COMBO RADIO SELECTIONS
+========================================= */
+
+/* Main selection group */
+.combo-choice-group {
+    background-color: #252525;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 25px;
+    min-width: 0;
+}
+
+    /* Section heading */
+    .combo-choice-group legend {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 8px;
+    }
+
+    /* Instructions */
+    .combo-choice-group > p {
+        color: #aaaaaa;
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+/* Radio option layout */
+.combo-radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Individual selection */
+.combo-radio-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px;
+    background-color: #303030;
+    border: 1px solid #444444;
+    border-radius: 9px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    /* Red radio selection circle */
+    .combo-radio-option input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        flex-shrink: 0;
+        accent-color: #e32626;
+        cursor: pointer;
+    }
+
+    /* Highlight selected option */
+    .combo-radio-option:has(input:checked) {
+        background-color: #391d1d;
+        border-color: #e32626;
+    }
+
+    /* Hover effect */
+    .combo-radio-option:hover {
+        border-color: #e32626;
+    }
+
+    /* Keyboard accessibility */
+    .combo-radio-option:focus-within {
+        outline: 2px solid #e32626;
+        outline-offset: 2px;
+    }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+
+    .combo-choice-group {
+        padding: 16px;
+    }
+
+    .combo-radio-option {
+        padding: 14px 12px;
+    }
+}
+
+/* Product layout on smaller screens */
+@media (max-width: 768px) {
+
+    .product-detail-image {
+        height: 260px;
+    }
+
+    .product-detail-info {
+        padding: 0;
+    }
+
+    .product-page {
+        padding: 25px 18px 70px;
+    }
+}
+
+/* Keep the complete image visible on mobile */
+@media (max-width: 768px) {
+    .product-detail-image {
+        height: 280px;
+    }
+}
+
+/* Out-of-stock combo options */
+.combo-radio-option.disabled-option {
+    opacity: 0.45;
+    cursor: not-allowed;
+    background-color: #222222;
+    border-color: #333333;
+}
+
+    .combo-radio-option.disabled-option input {
+        cursor: not-allowed;
+    }
+
+/* Special instructions section */
+.combo-instructions {
+    background-color: #252525;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 25px;
+}
+
+    .combo-instructions h3 {
+        color: #ffffff;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .combo-instructions p {
+        color: #aaaaaa;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .combo-instructions label {
+        display: block;
+        color: #ffffff;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .combo-instructions textarea {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #303030;
+        color: #ffffff;
+        border: 1px solid #444444;
+        border-radius: 9px;
+        padding: 15px;
+        font-size: 14px;
+        font-family: inherit;
+        resize: vertical;
+    }
+
+        .combo-instructions textarea:focus {
+            outline: none;
+            border-color: #e32626;
+        }
+
+    .combo-instructions small {
+        display: block;
+        color: #aaaaaa;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+
+/* Quantity controls container */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+/* Plus and minus buttons */
+.quantity-btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background-color: #303030;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    /* Button hover effect */
+    .quantity-btn:hover {
+        background-color: #e32626;
+        border-color: #e32626;
+    }
+
+/* Quantity input */
+.quantity-controls input[type="number"] {
+    width: 85px;
+    height: 48px;
+    box-sizing: border-box;
+    background-color: #252525;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 8px;
+}
+
+    /* Highlight input when selected */
+    .quantity-controls input[type="number"]:focus {
+        outline: none;
+        border-color: #e32626;
+    }
+
+/* Hide default number arrows */
+.quantity-controls input::-webkit-inner-spin-button,
+.quantity-controls input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-controls input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .quantity-controls {
+        gap: 10px;
+    }
+
+    .quantity-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .quantity-controls input[type="number"] {
+        height: 44px;
+        width: 70px;
+    }
+}

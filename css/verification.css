@@ -1,0 +1,297 @@
+
+/* Jeje Junctions - Email Verification Pages */
+
+body.verification-body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0d0d0d;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.verification-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.verification-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 44px 38px;
+    background: #1b1b1b;
+    border: 1px solid #303030;
+    border-radius: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.verification-icon {
+    width: 74px;
+    height: 74px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ef2929;
+    background: rgba(239, 41, 41, 0.1);
+    border-radius: 50%;
+}
+
+.verification-label {
+    color: #ef2929;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 12px;
+}
+
+.verification-card h1 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.verification-intro {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.verification-message {
+    text-align: left;
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.verification-message p {
+    margin: 0 0 12px;
+}
+
+.verification-note {
+    background: #242424;
+    border-left: 3px solid #ef2929;
+    border-radius: 6px;
+    padding: 17px 18px;
+    margin-bottom: 26px;
+    text-align: left;
+}
+
+.verification-note strong {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.verification-note p {
+    margin: 8px 0 0;
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.verification-button {
+    display: block;
+    padding: 15px 20px;
+    background: #e92323;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.verification-button:hover {
+    background: #c91c1c;
+    color: #ffffff;
+}
+
+.verification-back {
+    display: inline-block;
+    margin-top: 23px;
+    color: #bdbdbd;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.verification-back:hover {
+    color: #ffffff;
+}
+
+.verification-button:focus-visible,
+.verification-back:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .verification-page {
+        padding: 24px 16px;
+    }
+
+    .verification-card {
+        padding: 34px 24px;
+    }
+
+    .verification-card h1 {
+        font-size: 27px;
+    }
+}
+
+/* Successful email verification */
+
+.verification-success {
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.10);
+}
+
+.success-label {
+    color: #4ade80;
+}
+
+/* Failed email verification */
+
+.verification-error {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.10);
+}
+
+/* Resend Verification Form */
+
+.verification-form {
+    margin: 25px 0;
+    text-align: left;
+}
+
+.verification-field {
+    margin-bottom: 20px;
+}
+
+.verification-field label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.verification-field input {
+    width: 100%;
+    padding: 14px 15px;
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.verification-field input::placeholder {
+    color: #888888;
+}
+
+.verification-field input:focus {
+    outline: none;
+    border-color: #ef2929;
+    box-shadow: 0 0 0 3px rgba(239, 41, 41, 0.12);
+}
+
+.verification-form .verification-button {
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.verification-alert {
+    padding: 15px 17px;
+    border-radius: 8px;
+    margin: 18px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.error-alert {
+    background: rgba(239, 68, 68, 0.10);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #ffb4b4;
+}
+
+.info-alert {
+    background: rgba(74, 222, 128, 0.08);
+    border: 1px solid rgba(74, 222, 128, 0.25);
+    color: #d1fae5;
+}
+
+.resend-note {
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+
+/* Fix resend verification form layout */
+
+.verification-card .verification-form {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.verification-card .verification-field {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.verification-card .verification-field label {
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.verification-card .verification-field input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.verification-card .verification-form .verification-button {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    background: #e92323;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}

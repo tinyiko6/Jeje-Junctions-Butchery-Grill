@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    background: #171717;
+    padding: 22px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar-logo {
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+    .sidebar-logo img {
+        width: 135px;
+        height: 80px;
+        object-fit: contain;
+    }
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+    .sidebar-nav a {
+        display: block;
+        padding: 12px 11px;
+        color: #ddd;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 13px;
+    }
+
+        .sidebar-nav a:hover {
+            background: #292929;
+            color: #fff;
+        }
+
+        .sidebar-nav a.active {
+            background: #e32626;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .sidebar-nav a.logout-link {
+            margin-top: 25px;
+            color: #ff7777;
+        }
+
+/* Main content */
+
+.main-content {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    background: #111;
+}
+
+
+.top-bar {
+    min-height: 85px;
+    padding: 20px 32px;
+    background: #1b1b1b;
+    border-bottom: 1px solid #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-text h2 {
+    font-size: 21px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.welcome-text p {
+    font-size: 13px;
+    color: #999;
+}
+
+.admin-role {
+    padding: 9px 17px;
+    background: #252525;
+    border: 1px solid #3a3a3a;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* Site content */
+
+.site-content {
+    padding: 30px 32px;
+}
+
+.site-content-header {
+    margin-bottom: 25px;
+}
+
+    .site-content-header h1 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    .site-content-header p {
+        font-size: 13px;
+        color: #999;
+    }
+
+/* Two column layout */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* Cards */
+
+.content-card {
+    background: #1b1b1b;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+    .content-card h2 {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .content-card label {
+        display: block;
+        color: #aaa;
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    .content-card textarea {
+        width: 100%;
+        min-height: 110px;
+        padding: 10px;
+        background: #151515;
+        color: #ddd;
+        border: 1px solid #3a3a3a;
+        border-radius: 5px;
+        resize: vertical;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .content-card h3 {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+/* Operating hours */
+
+.hours-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+    .hours-row input {
+        width: 100%;
+        padding: 7px 8px;
+        background: #151515;
+        color: #ddd;
+        border: 1px solid #3a3a3a;
+        border-radius: 5px;
+        font-size: 11px;
+    }
+
+.save-btn {
+    margin-top: 18px;
+    margin-bottom:12px;
+    background: #e32626;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 13px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .save-btn:hover {
+        background: #c91e1e;
+    }
+
+/* FAQ header */
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+    .faq-header h2 {
+        margin-bottom: 0;
+    }
+
+.add-faq-btn {
+    background: #e32626;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .add-faq-btn:hover {
+        background: #c91e1e;
+    }
+
+/* FAQ table */
+
+.faq-table-wrapper {
+    overflow-x: auto;
+}
+
+.faq-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .faq-table th {
+        text-align: left;
+        padding: 10px 10px;
+        background: #151515;
+        color: #777;
+        font-size: 10px;
+        border-bottom: 1px solid #333;
+    }
+
+    .faq-table td {
+        padding: 12px 10px;
+        font-size: 11px;
+        color: #ddd;
+        border-bottom: 1px solid #292929;
+        vertical-align: top;
+        line-height: 1.4;
+    }
+
+    .faq-table tbody tr:hover {
+        background: #202020;
+    }
+
+    .faq-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+
+.faq-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #333;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #e32626;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background: #444;
+}
+
+.delete-btn:hover {
+    background: #c51e1e;
+}
+.add-faq-form {
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 8px;
+}
+
+    .add-faq-form label {
+        display: block;
+        margin: 12px 0 6px;
+        color: #bbb;
+        font-size: 12px;
+    }
+
+    .add-faq-form input,
+    .add-faq-form textarea {
+        width: 100%;
+        padding: 10px;
+        background: #1b1b1b;
+        color: #fff;
+        border: 1px solid #3a3a3a;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+    }
+
+    .add-faq-form textarea {
+        min-height: 90px;
+        resize: vertical;
+    }
+
+.cancel-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 13px;
+    cursor: pointer;
+}
+
+/* Edit FAQ form buttons */
+.add-faq-form .edit-btn,
+.add-faq-form .save-btn {
+    background: #e32626;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-right: 6px;
+}
+
+    .add-faq-form .edit-btn:hover,
+    .add-faq-form .save-btn:hover {
+        background: #c51e1e;
+    }
+
+.add-faq-form .cancel-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 9px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+    .add-faq-form .cancel-btn:hover {
+        background: #444;
+    }

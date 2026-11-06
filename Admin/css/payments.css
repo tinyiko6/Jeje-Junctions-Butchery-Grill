@@ -1,0 +1,146 @@
+
+/* =====================================
+   JEJE JUNCTIONS - PAYMENTS PAGE
+===================================== */
+
+/* Main payments section */
+.payments-content {
+    padding: 20px 32px 30px;
+    width: 100%;
+}
+
+/* Payments card */
+.payments-card {
+    background: #1b1b1b;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+}
+
+    /* Card heading */
+    .payments-card h2 {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 24px;
+    }
+
+/* Table container */
+.payments-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Payments table */
+.payments-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+    /* Table headings */
+    .payments-table th {
+        text-align: left;
+        padding: 15px 12px;
+        color: #aaaaaa;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid #303030;
+        white-space: nowrap;
+    }
+
+    /* Table information */
+    .payments-table td {
+        padding: 16px 12px;
+        border-bottom: 1px solid #303030;
+        vertical-align: middle;
+    }
+
+    /* Row hover */
+    .payments-table tbody tr:hover {
+        background: #242424;
+    }
+
+    /* Last table row */
+    .payments-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Payment action text */
+    .payments-table td:last-child span {
+        font-weight: 600;
+        color: #aaaaaa;
+    }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .payments-content {
+        padding: 16px;
+    }
+
+    .payments-card {
+        padding: 16px;
+    }
+
+    .payments-table {
+        min-width: 800px;
+    }
+}
+
+/* Confirm Payment button */
+.confirm-payment-btn {
+    background: #e32626;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 13px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+    .confirm-payment-btn:hover {
+        background: #c91f1f;
+    }
+
+/* Paid payment */
+.payment-paid {
+    color: #37c878 !important;
+    font-weight: 600;
+}
+
+/* Cancelled payment */
+.payment-cancelled {
+    color: #999999 !important;
+    font-weight: 600;
+}
+
+/* =====================================
+   PAYMENT FEEDBACK MESSAGES
+===================================== */
+
+.payment-alert {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+    /* Successful payment */
+    .payment-alert.alert-success {
+        background: #173a29;
+        color: #55d995;
+        border: 1px solid #2c8053;
+    }
+
+    /* Payment error */
+    .payment-alert.alert-error {
+        background: #3b1b1b;
+        color: #ff7777;
+        border: 1px solid #a83838;
+    }

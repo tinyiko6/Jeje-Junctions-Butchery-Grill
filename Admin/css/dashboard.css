@@ -1,0 +1,271 @@
+
+/* =========================================
+   JEJE JUNCTIONS - ADMIN DASHBOARD
+   ========================================= */
+
+/* Dashboard stays inside the main content area */
+.dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 12px 35px 35px;
+}
+
+/* 2. SUMMARY CARDS */
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    min-width: 0;
+    min-height: 145px;
+    padding: 24px;
+    background: #1b1b1b;
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+    .summary-card p {
+        color: #bbbbbb;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+
+    .summary-card h2 {
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .summary-card small {
+        color: #888888;
+        font-size: 11px;
+    }
+
+/* 3. RECENT ORDERS */
+
+.recent-orders,
+.quick-actions {
+    background: #1b1b1b;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.recent-orders {
+    overflow: hidden;
+}
+
+.recent-orders-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px;
+    border-bottom: 1px solid #303030;
+}
+
+    .recent-orders-header h2,
+    .quick-actions-heading h2 {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 800;
+        margin-bottom: 6px;
+    }
+
+    .recent-orders-header p,
+    .quick-actions-heading p {
+        color: #999999;
+        font-size: 12px;
+    }
+
+.view-orders {
+    color: #e32626;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+    .view-orders:hover {
+        text-decoration: underline;
+    }
+
+/* 4. ORDERS TABLE */
+
+.orders-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .orders-table thead {
+        background: #151515;
+    }
+
+    .orders-table th {
+        padding: 16px 20px;
+        color: #999999;
+        font-size: 11px;
+        font-weight: 800;
+        text-align: left;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid #333333;
+    }
+
+    .orders-table td {
+        padding: 18px 20px;
+        color: #dddddd;
+        font-size: 13px;
+        border-bottom: 1px solid #292929;
+    }
+
+        .orders-table td strong {
+            color: #ffffff;
+        }
+
+    .orders-table tbody tr:hover {
+        background: #202020;
+    }
+
+    .orders-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+/* 5. ORDER STATUS */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+    .status.pending {
+        background: #fff3d6;
+        color: #a66a00;
+    }
+
+    .status.preparing {
+        background: #e3efff;
+        color: #2563a6;
+    }
+
+    .status.completed {
+        background: #e2f5e8;
+        color: #218047;
+    }
+
+    .status.cancelled {
+        background: #fde8e8;
+        color: #c62828;
+    }
+
+.no-orders {
+    padding: 40px 20px;
+    color: #888888;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* 6. QUICK ACTIONS */
+
+.quick-actions {
+    padding: 25px;
+}
+
+.quick-actions-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+    .quick-actions-links a {
+        display: inline-block;
+        padding: 13px 22px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s ease;
+    }
+
+.action-primary {
+    background: #e32626;
+    color: #ffffff;
+}
+
+    .action-primary:hover {
+        background: #c91d1d;
+    }
+
+.action-secondary {
+    background: #292929;
+    color: #dddddd;
+}
+
+    .action-secondary:hover {
+        background: #3a3a3a;
+    }
+
+/* 7. RESPONSIVE DESIGN */
+
+@media (max-width: 1100px) {
+    .summary-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-content {
+        padding: 12px 25px 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .dashboard-content {
+        padding: 12px 15px 20px;
+    }
+
+    .summary-cards {
+        gap: 12px;
+    }
+
+    .summary-card {
+        min-height: 130px;
+        padding: 18px;
+    }
+
+        .summary-card h2 {
+            font-size: 27px;
+        }
+
+    .recent-orders-header {
+        padding: 20px;
+    }
+
+    .orders-table {
+        min-width: 650px;
+    }
+
+    .quick-actions {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+}

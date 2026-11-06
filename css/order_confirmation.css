@@ -1,0 +1,219 @@
+/* =========================
+   ORDER CONFIRMATION
+========================= */
+
+.confirmation-page {
+    max-width: 850px;
+    margin: auto;
+    padding: 70px 25px 100px;
+}
+
+.confirmation-box {
+    background-color: #1d1d1d;
+    padding: 50px;
+    text-align: center;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e32626;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.confirmation-box h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.confirmation-message {
+    color: #bbb;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* =========================
+   ORDER NUMBER
+========================= */
+
+.order-number {
+    padding: 20px;
+    background-color: #111;
+    margin-bottom: 30px;
+}
+
+    .order-number span {
+        display: block;
+        color: #aaa;
+        margin-bottom: 8px;
+    }
+
+    .order-number strong {
+        font-size: 25px;
+    }
+
+/* =========================
+   ORDER INFORMATION
+========================= */
+
+.order-information {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+    .order-information div {
+        padding: 18px;
+        background-color: #111;
+    }
+
+    .order-information span {
+        display: block;
+        color: #aaa;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .order-information strong {
+        font-size: 15px;
+    }
+
+/* =========================
+   ORDER ITEMS
+========================= */
+
+.ordered-items {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+    .ordered-items h2 {
+        margin-bottom: 20px;
+    }
+
+.ordered-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+    .ordered-item div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .ordered-item span {
+        color: #aaa;
+    }
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 2px solid #555;
+    font-size: 21px;
+}
+
+/* =========================
+   COLLECTION MESSAGE
+========================= */
+
+.collection-message {
+    text-align: left;
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #111;
+}
+
+    .collection-message h2 {
+        margin-top: 0;
+    }
+
+    .collection-message p {
+        color: #bbb;
+        line-height: 1.7;
+    }
+
+/* =========================
+   BUTTONS
+========================= */
+
+.confirmation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+    .confirmation-actions a {
+        padding: 14px 25px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.continue-button {
+    background-color: #e32626;
+    color: white;
+}
+
+    .continue-button:hover {
+        background-color: #b91d1d;
+    }
+
+.orders-button {
+    border: 1px solid #555;
+    color: white;
+}
+
+    .orders-button:hover {
+        background-color: #333;
+    }
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .confirmation-box {
+        padding: 35px 25px;
+    }
+
+        .confirmation-box h1 {
+            font-size: 34px;
+        }
+
+    .order-information {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+        .confirmation-actions a {
+            display: block;
+        }
+}
+
+@media (max-width: 500px) {
+
+    .order-information {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,199 @@
+/* =========================
+   CHECKOUT PAGE
+========================= */
+
+.checkout-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 30px 100px;
+}
+
+    .checkout-page h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+.checkout-intro {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.checkout-error {
+    padding: 15px;
+    margin-bottom: 25px;
+    background-color: #3a1515;
+    border: 1px solid #e32626;
+    color: #fff;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+
+/* =========================
+   CHECKOUT FORM
+========================= */
+
+.checkout-form {
+    background-color: #1d1d1d;
+    padding: 35px;
+}
+
+    .checkout-form h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+
+/* =========================
+   CUSTOMER DETAILS
+========================= */
+
+.customer-details {
+    background-color: #111;
+    padding: 20px;
+    margin-bottom: 35px;
+}
+
+    .customer-details p {
+        margin: 8px 0;
+        color: #ccc;
+    }
+
+
+/* =========================
+   FORM SECTIONS
+========================= */
+
+.form-section {
+    margin-bottom: 35px;
+}
+
+    .form-section h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .form-section label {
+        display: block;
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: #111;
+        cursor: pointer;
+    }
+
+        .form-section label:hover {
+            background-color: #222;
+        }
+
+    .form-section input {
+        margin-right: 10px;
+    }
+
+.payment-note {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PLACE ORDER
+========================= */
+
+.place-order-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background-color: #e32626;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .place-order-button:hover {
+        background-color: #b91d1d;
+    }
+
+
+/* =========================
+   ORDER SUMMARY
+========================= */
+
+.order-summary {
+    background-color: #1d1d1d;
+    padding: 35px;
+    height: fit-content;
+}
+
+    .order-summary h2 {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+    .summary-item div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .summary-item span {
+        color: #aaa;
+        font-size: 14px;
+    }
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #555;
+    font-size: 21px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .checkout-page {
+        padding: 40px 20px 80px;
+    }
+
+        .checkout-page h1 {
+            font-size: 35px;
+        }
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-form,
+    .order-summary {
+        padding: 25px;
+    }
+}

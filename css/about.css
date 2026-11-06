@@ -1,0 +1,390 @@
+
+
+/* =========================================
+   1. MAIN ABOUT PAGE
+   ========================================= */
+
+/* Black background for the entire About page */
+.about-page {
+    width: 100%;
+    background-color: #101010;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   2. ABOUT US BANNER
+   ========================================= */
+
+/* Grilled meat background image with a
+   dark overlay for better text visibility */
+.about-banner {
+    width: 100%;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 8%;
+    background-image: linear-gradient( 90deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.70) 45%, rgba(0, 0, 0, 0.25) 100% ), url("../images/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+/* Keeps all banner text aligned to the left */
+.about-banner-content {
+    width: 100%;
+    max-width: 750px;
+    margin: 0;
+    text-align: left;
+}
+
+
+/* Small red labels used throughout the page */
+.about-label {
+    color: #e53935;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* Main About Us heading */
+.about-banner h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+
+    /* Red highlight for Jeje Junctions */
+    .about-banner h1 span {
+        color: #e53935;
+    }
+
+
+/* Banner slogan */
+.about-tagline {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+
+/* Banner description */
+.about-description {
+    max-width: 650px;
+    color: #dddddd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   3. OUR STORY SECTION
+   ========================================= */
+
+/* Black background around the story block */
+.about-story {
+    width: 100%;
+    padding: 75px 8%;
+    background-color: #101010;
+}
+
+
+/* Dark block containing the database story */
+.about-story-content {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px 55px;
+    background-color: #1c1c1c;
+    border: 1px solid #333333;
+    border-left: 5px solid #e53935;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Our Story heading */
+.about-story h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+
+/* Story content loaded from MySQL */
+.story-text {
+    width: 100%;
+    max-width: 100%;
+    color: #dddddd;
+    font-size: 16px;
+    line-height: 1.9;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   4. WHAT WE OFFER SECTION
+   ========================================= */
+
+/* Black background for the offers section */
+.about-offers {
+    width: 100%;
+    padding: 75px 8% 85px;
+    background-color: #101010;
+}
+
+
+/* Section heading */
+.about-offers-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+
+    /* Main heading */
+    .about-offers-heading h2 {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 18px;
+    }
+
+
+        /* Red highlighted words */
+        .about-offers-heading h2 span {
+            color: #e53935;
+        }
+
+
+    /* Section description */
+    .about-offers-heading > p:last-child {
+        color: #cccccc;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+
+/* Displays four cards next to each other */
+.about-offers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* Individual offer cards */
+.about-offer-card {
+    min-width: 0;
+    min-height: 260px;
+    padding: 35px 25px;
+    background-color: #1c1c1c;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    /* Hover effect on cards */
+    .about-offer-card:hover {
+        transform: translateY(-6px);
+        border-color: #e53935;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+
+/* Circular icon backgrounds */
+.offer-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+    background-color: #352020;
+    color: #e53935;
+    border-radius: 50%;
+    font-size: 29px;
+}
+
+
+/* Offer card headings */
+.about-offer-card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* Offer card descriptions */
+.about-offer-card p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   5. EXPLORE MENU BUTTON
+   ========================================= */
+
+/* Centres the button beneath the cards */
+.about-menu-action {
+    margin-top: 45px;
+    text-align: center;
+}
+
+
+/* Red menu button */
+.about-menu-btn {
+    display: inline-block;
+    padding: 16px 34px;
+    background-color: #d32f2f;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+    /* Button hover effect */
+    .about-menu-btn:hover {
+        background-color: #b71c1c;
+        color: #ffffff;
+        transform: translateY(-3px);
+    }
+
+
+/* =========================================
+   6. RESPONSIVE DESIGN - TABLETS
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    /* Two cards per row on tablets */
+    .about-offers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-banner h1 {
+        font-size: 42px;
+    }
+
+    .about-story-content {
+        padding: 40px;
+    }
+}
+
+
+/* =========================================
+   7. RESPONSIVE DESIGN - MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* Smaller banner on mobile */
+    .about-banner {
+        min-height: 350px;
+        padding: 55px 6%;
+        background-position: center;
+    }
+
+
+        /* Smaller banner heading */
+        .about-banner h1 {
+            font-size: 32px;
+        }
+
+
+    .about-label {
+        font-size: 12px;
+    }
+
+
+    .about-tagline {
+        font-size: 18px;
+    }
+
+
+    .about-description {
+        font-size: 14px;
+    }
+
+
+    /* Reduce spacing around story */
+    .about-story {
+        padding: 50px 5%;
+    }
+
+
+    /* Smaller story block padding */
+    .about-story-content {
+        padding: 30px 22px;
+    }
+
+
+    .about-story h2 {
+        font-size: 28px;
+    }
+
+
+    .story-text {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+
+    /* Reduce spacing around offers */
+    .about-offers {
+        padding: 55px 5% 65px;
+    }
+
+
+    .about-offers-heading h2 {
+        font-size: 28px;
+    }
+
+
+    /* One card per row on mobile */
+    .about-offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-offer-card {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+
+
+    /* Full-width menu button on mobile */
+    .about-menu-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

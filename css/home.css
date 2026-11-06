@@ -1,0 +1,598 @@
+/* =========================================
+   JEJE JUNCTIONS - HOME PAGE
+========================================= */
+
+/* Keep all homepage widths predictable. */
+.home-benefits *,
+.home-information *,
+.hero *,
+.intro * {
+    box-sizing: border-box;
+}
+
+/* Give content a consistent maximum width on large screens. */
+.section-container {
+    width: min(1140px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* =========================================
+   HERO: DARK FADE BEHIND LEFT-ALIGNED TEXT
+========================================= */
+/* Fill the hero with the food photo and darken the left side for text. */
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 70px max(24px, calc((100% - 1140px) / 2));
+    color: #ffffff;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.79) 30%, rgba(0, 0, 0, 0.28) 65%, rgba(0, 0, 0, 0.08) 100%), url("../images/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Keep the heading and buttons together on the left side. */
+.hero-content {
+    width: 100%;
+    max-width: 610px;
+    text-align: left;
+}
+
+/* Small red labels establish the restaurant branding. */
+.hero-label,
+.section-label {
+    color: #e32626;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Large responsive heading that scales with the screen width. */
+.hero h1 {
+    margin: 16px 0 18px;
+    color: #ffffff;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.08;
+    font-weight: 800;
+}
+
+.hero-description {
+    max-width: 490px;
+    color: #ededed;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+/* Display the two call-to-action buttons side by side where possible. */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.hero .btn {
+    display: inline-block;
+    min-width: 150px;
+    padding: 15px 24px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+    .hero .btn:hover {
+        transform: translateY(-2px);
+    }
+
+/* Red primary button highlights online ordering. */
+.hero .btn-primary {
+    background: #e32626;
+    border: 2px solid #e32626;
+    color: #ffffff;
+}
+
+    .hero .btn-primary:hover {
+        background: #bf1c1c;
+        border-color: #bf1c1c;
+    }
+
+/* Outlined secondary button links to the menu. */
+.hero .btn-secondary {
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+    .hero .btn-secondary:hover {
+        background: #ffffff;
+        color: #111111;
+    }
+
+/* =========================================
+   WELCOME INTRODUCTION
+========================================= */
+/* Center the welcome message and separate it from the hero. */
+.intro {
+    padding: 62px 20px 32px;
+    background: #0e0e0e;
+    color: #ffffff;
+    text-align: center;
+}
+
+    .intro .section-container {
+        max-width: 760px;
+    }
+
+    .intro h2 {
+        margin: 12px 0 18px;
+        font-size: clamp(29px, 3.4vw, 40px);
+    }
+
+    .intro p:last-child {
+        color: #c9c9c9;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+/* =========================================
+   WHY CHOOSE JEJE JUNCTIONS
+========================================= */
+/* Give the benefits section its own breathing room. */
+.home-benefits {
+    padding: 38px 0 80px;
+    background: #0e0e0e;
+    color: #ffffff;
+}
+
+    .home-benefits h2 {
+        margin: 0 0 32px;
+        font-size: clamp(28px, 3vw, 36px);
+        text-align: center;
+    }
+
+/* Four equal columns on desktop; media queries reduce the column count. */
+.home-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Dark cards with a red top border match the Jeje Junctions theme. */
+.home-benefit-card {
+    min-height: 220px;
+    padding: 30px 20px;
+    background: #1e1e1e;
+    border: 1px solid #3a3a3a;
+    border-top: 4px solid #e32626;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+    /* A subtle hover effect shows the cards are being highlighted. */
+    .home-benefit-card:hover {
+        transform: translateY(-4px);
+        border-color: #e32626;
+    }
+
+.benefit-icon {
+    display: block;
+    margin-bottom: 14px;
+    color: #e32626;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.home-benefit-card h3 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 21px;
+}
+
+.home-benefit-card p {
+    margin: 0;
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   OPERATING HOURS AND CONTACT INFORMATION
+========================================= */
+/* Two-column layout for opening hours and contact details. */
+.home-information {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 52px;
+    padding: 65px max(24px, calc((100% - 1140px) / 2));
+    background: #171717;
+    color: #ffffff;
+}
+
+/* Remove old section backgrounds so the shared panel stays consistent. */
+.home-hours,
+.home-contact {
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    color: #ffffff;
+}
+
+.home-hours-content,
+.home-contact-content {
+    max-width: none;
+    margin: 0;
+    text-align: left;
+}
+
+.home-hours h2,
+.home-contact h2 {
+    margin: 0 0 12px;
+    font-size: clamp(25px, 2.5vw, 32px);
+}
+
+.hours-intro,
+.contact-intro {
+    min-height: 48px;
+    margin: 0 0 24px;
+    color: #bfbfbf;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Group operating-hour rows inside a single charcoal panel. */
+.home-hours-list {
+    overflow: hidden;
+    padding: 0 22px;
+    background: #242424;
+    border: 1px solid #3c3c3c;
+    border-radius: 10px;
+}
+/* Place the day and opening times on opposite sides of each row. */
+.home-hours-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 19px 0;
+    border-bottom: 1px solid #424242;
+    font-size: 15px;
+}
+
+    .home-hours-row:last-child {
+        border-bottom: none;
+    }
+
+    .home-hours-row span:first-child {
+        font-weight: 700;
+    }
+
+    .home-hours-row span:last-child {
+        color: #dedede;
+        text-align: right;
+    }
+
+/* Display location, phone and email in three compact cards. */
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Keep long contact details wrapped within their cards. */
+.contact-item {
+    min-height: 145px;
+    padding: 24px 12px;
+    background: #242424;
+    border: 1px solid #3c3c3c;
+    border-radius: 10px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+    .contact-item:hover {
+        border-color: #e32626;
+    }
+
+    .contact-item h3 {
+        margin: 0 0 12px;
+        color: #e32626;
+        font-size: 17px;
+    }
+
+    .contact-item p {
+        margin: 0;
+        color: #dedede;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+/* =========================================
+   TABLET AND MOBILE LAYOUTS
+========================================= */
+/* Tablet: reduce benefits to two columns and stack business sections. */
+@media (max-width: 1050px) {
+    .home-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-information {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hours-intro,
+    .contact-intro {
+        min-height: 0;
+    }
+}
+
+/* Mobile: center hero text and stack all benefit/contact cards. */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 490px;
+        padding: 55px 20px;
+        justify-content: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.68)), url("../images/hero.png");
+        background-position: 58% center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 10vw, 46px);
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .intro {
+        padding: 52px 18px 25px;
+    }
+
+    .home-benefits {
+        padding: 32px 0 55px;
+    }
+
+    .home-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .home-benefit-card {
+        min-height: 0;
+    }
+
+    .home-information {
+        padding: 55px 20px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        min-height: 0;
+    }
+}
+
+/* =========================================
+   MOBILE HOMEPAGE IMPROVEMENTS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        width: 100%;
+        min-width: 0;
+        min-height: 480px;
+        padding: 60px 20px;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(30px, 8vw, 40px);
+        line-height: 1.15;
+        overflow-wrap: break-word;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero .btn {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 15px 18px;
+    }
+
+    .intro,
+    .home-benefits,
+    .home-information {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+        overflow-wrap: break-word;
+    }
+
+    .home-benefit-card {
+        padding: 28px 20px;
+    }
+}/* Matching homepage benefit icons */
+.home-benefit-card .benefit-icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin: 0 auto 18px;
+    color: #e32626;
+    stroke-width: 2;
+}
+
+/* =========================================
+   FINAL MOBILE HOMEPAGE LAYOUT
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Hero section */
+    .hero {
+        min-height: 440px;
+        padding: 45px 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.15;
+        margin: 14px 0;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        margin-top: 22px;
+        gap: 10px;
+    }
+
+    .hero .btn {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    /* Welcome section */
+    .intro {
+        padding: 42px 18px 22px;
+    }
+
+    .intro h2 {
+        font-size: 27px;
+    }
+
+    .intro p:last-child {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Why Choose Us */
+    .home-benefits {
+        padding: 30px 0 48px;
+    }
+
+    .home-benefits h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .home-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .home-benefit-card {
+        padding: 20px 12px;
+        min-width: 0;
+    }
+
+    .home-benefit-card .benefit-icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 14px;
+    }
+
+    .home-benefit-card h3 {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .home-benefit-card p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Operating hours and contact */
+    .home-information {
+        gap: 35px;
+        padding: 42px 18px;
+    }
+
+    .home-hours-list {
+        padding: 0 14px;
+    }
+
+    .home-hours-row {
+        gap: 10px;
+        padding: 15px 0;
+        font-size: 13px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .contact-item {
+        padding: 20px 15px;
+    }
+}
+
+/* =========================================
+   CONTACT PHONE NUMBER STYLING
+========================================= */
+
+/* Keep clickable contact links consistent with the theme */
+.home-contact a,
+.contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Red highlight when a customer hovers */
+.home-contact a:hover,
+.contact-item a:hover {
+    color: #e32626;
+}
+
+/* Prevent automatic blue phone number styling on iPhone */
+.home-contact a[x-apple-data-detectors],
+.contact-item a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+}

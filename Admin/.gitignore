@@ -1,0 +1,9 @@
+# Private database and email configuration
+private_config/
+db_connect.php
+.env
+.env.*
+*.sql
+
+# Temporary files
+*.log

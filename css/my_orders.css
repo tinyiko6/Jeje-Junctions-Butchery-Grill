@@ -1,0 +1,156 @@
+.orders-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 30px 100px;
+}
+
+    .orders-page h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+.orders-intro {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.no-orders {
+    background-color: #1d1d1d;
+    padding: 70px 30px;
+    text-align: center;
+}
+
+    .no-orders h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .no-orders p {
+        color: #aaa;
+        margin-bottom: 30px;
+    }
+
+.shop-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #e32626;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .shop-button:hover {
+        background-color: #b91d1d;
+    }
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.order-card {
+    background-color: #1d1d1d;
+    padding: 30px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #444;
+}
+
+.order-label {
+    display: block;
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.order-header h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.order-status {
+    padding: 8px 14px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 25px 0;
+}
+
+    .order-details div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .order-details span {
+        color: #888;
+        font-size: 13px;
+    }
+
+    .order-details strong {
+        color: white;
+        font-size: 15px;
+    }
+
+.order-actions {
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.view-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #e32626;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .view-button:hover {
+        background-color: #b91d1d;
+    }
+
+@media (max-width: 900px) {
+
+    .order-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .orders-page {
+        padding: 40px 20px 80px;
+    }
+
+        .orders-page h1 {
+            font-size: 35px;
+        }
+
+    .order-card {
+        padding: 25px;
+    }
+
+    .order-header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .order-details {
+        grid-template-columns: 1fr;
+    }
+}

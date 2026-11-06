@@ -1,0 +1,114 @@
+
+/* Order information and products cards */
+.orders-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.orders-card {
+    padding: 28px;
+    border-radius: 14px;
+}
+
+    .orders-card h2 {
+        font-size: 20px;
+        margin-bottom: 22px;
+        color: #ffffff;
+    }
+
+    /* Order information */
+    .orders-card > p {
+        margin-bottom: 14px;
+        color: #dddddd;
+        line-height: 1.6;
+    }
+
+        .orders-card > p strong {
+            color: #ffffff;
+        }
+
+/* Individual ordered products */
+.order-product {
+    padding: 22px;
+    margin-bottom: 20px;
+    background: #242424;
+    border: 1px solid #393939;
+    border-radius: 12px;
+}
+
+    .order-product h3 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .order-product h4 {
+        color: #f4b942;
+        margin-top: 20px;
+        margin-bottom: 14px;
+    }
+
+    .order-product p {
+        color: #dddddd;
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+
+        .order-product p strong {
+            color: #ffffff;
+        }
+
+/* Hide unnecessary separators */
+.orders-card hr {
+    display: none;
+}
+
+    .page-header a:hover {
+        background: #e0a72d;
+    }
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .orders-card {
+        padding: 18px;
+    }
+
+    .order-product {
+        padding: 16px;
+    }
+
+    .page-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/* Back to Orders - simple navigation link */
+.page-header .back-link {
+    display: inline-block;
+    background: transparent;
+    color: #cccccc;
+    padding: 0;
+    margin-top: 18px;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+    /* Back link hover effect */
+    .page-header .back-link:hover {
+        background: transparent;
+        color: #e53935;
+        text-decoration: underline;
+    }
+
+/* Combo Customisation heading */
+.order-product h4 {
+    color: #e53935;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 22px;
+    margin-bottom: 14px;
+}
